@@ -2,6 +2,7 @@ import brewing.potion_class as potion_class
 import brewing.containers as containers
 import brewing.cooking as cooking
 import brewing.inspection as inspection
+import brewing.ingredients as ingredients
 
 
 def make_example_potion(student_name):
@@ -17,12 +18,19 @@ def make_example_potion(student_name):
 def make_python_expert_potion(student_name):
     print("I am a Python Expert")
     # todo: write this function!
+    my_potion = potion_class.Potion(student_name=student_name)
+    # Set up your old kettle and light an eternal flame underneath it.
+    my_potion.setup(container=containers.pewter_cauldron, heat_source=cooking.fire, )
+    my_potion.add_ingredients([ingredients.fish_eyes, ingredients.unicorn_hair, ingredients.tea_leaves])
+    # Simmer for 5 hours.
+    cooking.simmer(my_potion, duration=2)
+    print("You have successfully run make_example_potion, well done :).")
+    return my_potion
 
-    return
 
 
 if __name__ == "__main__":
-    my_name = 'ASPP student'
-    my_potion = make_example_potion(student_name=my_name)
+    my_name = 'diego+dario'
+    python_expert = make_python_expert_potion(student_name=my_name)
     # Let Snape inspect the potion
-    inspection.inspection_by_Snape(potion=my_potion, target_potion='example_potion')
+    inspection.inspection_by_Snape(potion=python_expert, target_potion='python_expert')
