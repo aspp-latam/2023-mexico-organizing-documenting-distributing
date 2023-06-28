@@ -15,14 +15,21 @@ def make_example_potion(student_name):
 
 
 def make_python_expert_potion(student_name):
-    print("I am a Python Expert")
     # todo: write this function!
-
-    return
+    python_expert = potion_class.Potion(student_name=student_name)
+    # Set up your old kettle and light an eternal flame underneath it
+    python_expert.setup(container=containers.pewter_cauldron, heat_source=cooking.fire)
+    # Addin gingredients 
+    python_expert.add_ingredients(ingredients =[ 'fish_eyes' , 'tea_leaves','unicorn_hair'] )
+    # Simmer for 2 hours.
+    cooking.simmer(python_expert, duration=2) 
+    print("I am a Python Expert")
+    return python_expert
 
 
 if __name__ == "__main__":
     my_name = 'ASPP student'
-    my_potion = make_example_potion(student_name=my_name)
+    #my_potion = make_example_potion(student_name=my_name)
+    python_expert = make_python_expert_potion(student_name=my_name)
     # Let Snape inspect the potion
-    inspection.inspection_by_Snape(potion=my_potion, target_potion='example_potion')
+    inspection.inspection_by_Snape(potion=python_expert, target_potion='python_expert')
