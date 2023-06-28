@@ -1,15 +1,15 @@
-import brewing.potion_class
-import brewing.containers
-import brewing.cooking
-import brewing.inspection
+import brewing.potion_class as potion_class
+import brewing.containers as containers
+import brewing.cooking    as cooking
+import brewing.inspection as inspection
 
 
 def make_example_potion(student_name):
-    my_potion = brewing.potion_class.Potion(student_name=student_name)
+    my_potion = potion_class.Potion(student_name=student_name)
     # Set up your old kettle and light an eternal flame underneath it.
-    my_potion.setup(container=brewing.containers.old_kettle, heat_source=brewing.cooking.eternal_flame)
+    my_potion.setup(container=containers.old_kettle, heat_source=cooking.eternal_flame)
     # Simmer for 5 hours.
-    brewing.cooking.simmer(my_potion, duration=5)
+    cooking.simmer(my_potion, duration=5)
     print("You have successfully run make_example_potion, well done :).")
     return my_potion
 
@@ -25,4 +25,4 @@ if __name__ == "__main__":
     my_name = 'ASPP student'
     my_potion = make_example_potion(student_name=my_name)
     # Let Snape inspect the potion
-    brewing.inspection.brewing.inspection_by_Snape(potion=my_potion, target_potion='example_potion')
+    inspection.inspection_by_Snape(potion=my_potion, target_potion='example_potion')
