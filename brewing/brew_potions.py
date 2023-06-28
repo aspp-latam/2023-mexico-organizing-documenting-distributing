@@ -1,7 +1,7 @@
-import potion_class
-import containers
-import cooking
-import inspection
+import brewing.potion_class as potion_class
+import brewing.containers as containers
+import brewing.cooking as cooking
+import brewing.inspection as inspection
 
 
 def make_example_potion(student_name):
@@ -17,7 +17,7 @@ def make_example_potion(student_name):
 def make_python_expert_potion(student_name):
     print("I am a Python Expert")
     # todo: write this function!
-    
+
     return
 
 
