@@ -16,7 +16,12 @@ def make_example_potion(student_name):
 
 def make_python_expert_potion(student_name):
     print("I am a Python Expert")
+    my_potion = potion_class.Potion(student_name=student_name)
+    my_potion.setup(container=containers.pewter_cauldron, heat_source=cooking.fire)
+    my_potion.add_ingredients(['fish_eyes', 'tea_leaves', 'unicorn_hair'])
+    cooking.simmer(my_potion, duration=2)
     # todo: write this function!
+    inspection.inspection_by_Snape(potion=my_potion, target_potion='python_expert')
 
     return
 
@@ -25,4 +30,4 @@ if __name__ == "__main__":
     my_name = 'ASPP student'
     my_potion = make_example_potion(student_name=my_name)
     # Let Snape inspect the potion
-    inspection.inspection_by_Snape(potion=my_potion, target_potion='example_potion')
+    make_python_expert_potion("Coni")
